@@ -28,6 +28,6 @@ jobs:
       - name: Deploy to GitHub Pages #donde queremos que se mueva
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-        branch: gh-pages
+        branch: gh-pages 
         folder: dist #es todo el proyecto pero lo compila para que esto  lo pueda leer
 
