@@ -22,8 +22,14 @@ jobs:
       
     - name: Build project
       run: npm run build #coge y compila en la carpeta dist
+    
+    - name: Generate 404.html
+      run: |
+        repo_name=$(git rev-parse --show-toplevel | xargs basename)
+        echo "<!DOCTYPE html><html lang="es"><head><meta http-equiv='refresh' content='0; url=https://angelegar2015.github.io/clase_Pablo/'></head></html>" > dist/404.html
 
       
+
 
     - name: Deploy to GitHub Pages #donde queremos que se mueva
       uses: JamesIves/github-pages-deploy-action@3.7.1
