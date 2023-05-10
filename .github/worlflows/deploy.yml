@@ -3,7 +3,7 @@ name: Construir y lanzar
 on:
   push:
     branches:
-      - main:
+      - main
 
 jobs:
   build-and-deploy:
